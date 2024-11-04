@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validación simple
         if (!name || !email || !message) {
-            event.preventDefault(); // Evita el envío del formulario
-            errorMessage.style.display = 'block'; // Muestra el mensaje de error
+            event.preventDefault();
+            errorMessage.style.display = 'block'; // Mensaje de error
             return;
         }
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Si pasa todas las validaciones, muestra el mensaje de éxito
+        // Mensaje de éxito
         successMessage.style.display = 'block';
     });
 });
