@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0; /* Fondo claro */
+    color: #404040; /* Texto oscuro */
+}
+
+h1 {
+    color: #f3f3f3; /* Títulos más oscuros */ 
+}
+
+h2, h3 {
+    color: #202020; /* Títulos más oscuros */
+}
+
+.card {
+    background: #ffffff; /* Fondo blanco para tarjetas */
+    border: 1px solid #b0b0b0; /* Borde gris claro */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-color: #007bff; /* Cambia el borde al azul en hover */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de botón azul */
+    border-color: #007bff; /* Borde del botón */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+footer {
+    background: #202020; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
