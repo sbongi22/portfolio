@@ -1,6 +1,6 @@
 Santiago Bongiorno - Portfolio Profesional
 
-Contacto
+Contacto:
 
 Email: sbongi22@gmail.com
 
