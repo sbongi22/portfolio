@@ -4,188 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Santiago Bongiorno - Desarrollador Web especializado en PHP y MySQL">
-    <title>Portfolio - Santiago Bongiorno</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Santiago Bongiorno - Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-5">
-        <div class="container">
-            <h1 class="mb-2">Santiago Bongiorno</h1>
-            <p class="lead">Desarrollador Web | Experto Universitario en PHP y MySQL</p>
-            <div class="social-links mt-3">
-                <a href="https://github.com/sbongi22" target="_blank" class="text-white mx-2" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" class="text-white mx-2" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- Toggle Dark/Light Mode -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">SB</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                </ul>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">SB<span class="cursor">_</span></a>
+            <div class="nav-links">
+                <a href="#work" class="nav-link">Proyectos</a>
+                <a href="#about" class="nav-link">Sobre Mi</a>
+                <a href="#contact" class="nav-link">Contacto</a>
             </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section id="portfolio" class="py-5">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 class="text-center mb-5">Mis Proyectos</h2>
-            <div class="row">
-                
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/UE.png" class="card-img-top" alt="Plataforma de Gestión Universitaria" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Plataforma de Gestión Universitaria</h5>
-                            <p class="card-text">Sistema web completo para gestión académica desarrollado como proyecto final de la UTN.</p>
-                            <div class="mt-auto">
-                                <p class="text-muted mb-2"><small><i class="fas fa-code"></i> PHP • MySQL</small></p>
-                                <a href="https://github.com/sbongi22/ue" target="_blank" class="btn btn-primary">
-                                    <i class="fab fa-github"></i> Ver Proyecto
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Santiago <span class="gradient-text">Bongiorno</span>
+                </h1>
+                <p class="hero-description">
+                    Desarrollador web especializado en PHP y MySQL. 
+                    Estudiante de Tecnicatura en Programación (UTN).
+                </p>
+                <div class="hero-social">
+                    <a href="https://github.com/sbongi22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sbongi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
                 </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/mascota-microchip.png" class="card-img-top" alt="Sistema de Trazabilidad Veterinaria" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sistema de Trazabilidad Veterinaria</h5>
-                            <p class="card-text">Aplicación CRUD para registro y seguimiento de mascotas con tecnología de microchip.</p>
-                            <div class="mt-auto">
-                                <p class="text-muted mb-2"><small><i class="fas fa-code"></i> Java • MySQL</small></p>
-                                <a href="https://github.com/sbongi22/TPI_ProgII" target="_blank" class="btn btn-primary">
-                                    <i class="fab fa-github"></i> Ver Proyecto
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto comentado para futuro -->
-                <!-- <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/proyecto3.png" class="card-img-top" alt="Sistema de Gestión de Indumentaria" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sistema de Gestión para Local de Indumentaria</h5>
-                            <p class="card-text">Descripción del proyecto</p>
-                            <div class="mt-auto">
-                                <p class="text-muted mb-2"><small><i class="fas fa-code"></i> Tecnologías</small></p>
-                                <a href="#" target="_blank" class="btn btn-primary">
-                                    <i class="fab fa-github"></i> Ver Proyecto
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
     </section>
 
-    <section id="about" class="bg-light py-5">
+    <!-- Work Section -->
+    <section id="work" class="work">
         <div class="container">
-            <h2 class="text-center mb-4">Sobre Mí</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="text-justify">
-                        Soy desarrollador en formación y estudiante de la Tecnicatura Universitaria en Programación (UTN), 
-                        con experiencia real en soporte de sistemas y gestión de bases de datos en entornos académicos y de salud.
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/UE.png" alt="Plataforma de Gestión Universitaria" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sbongi22/ue" target="_blank" class="project-link" aria-label="Ver código en GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <h3 class="project-title">Plataforma de Gestión Universitaria</h3>
+                        <p class="project-description">
+                            Sistema web completo desarrollado para la UTN que permite gestionar estudiantes, 
+                            cursos y administración académica con arquitectura MVC.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/mascota-microchip.png" alt="Sistema de Trazabilidad Veterinaria" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sbongi22/TPI_ProgII" target="_blank" class="project-link" aria-label="Ver código en GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Trazabilidad Veterinaria</h3>
+                        <p class="project-description">
+                            Aplicación CRUD para registro y seguimiento de mascotas mediante tecnología 
+                            de microchip con gestión completa de base de datos.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Sobre Mí</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        Desarrollador en formación apasionado por crear soluciones web eficientes y escalables. 
+                        Actualmente cursando la <strong>Tecnicatura Universitaria en Programación</strong> en la UTN, 
+                        con experiencia práctica en soporte de sistemas y gestión de bases de datos.
                     </p>
-                    <p class="text-justify">
-                        Trabajo principalmente con PHP y MySQL, y tengo conocimientos en Java, Python y Oracle SQL. 
-                        Me interesa el desarrollo de soluciones prácticas, el análisis de procesos y la mejora continua de sistemas. 
-                        Busco mi primera oportunidad profesional en IT, donde pueda seguir aprendiendo y aportar una base técnica 
-                        sólida y una fuerte capacidad analítica.
+                    <p class="about-text">
+                        Mi enfoque se centra en el <strong>desarrollo backend</strong> con PHP y MySQL, 
+                        aunque también tengo experiencia en Java, Python y Oracle SQL. Me apasiona el 
+                        análisis de procesos y la optimización de sistemas.
+                    </p>
+                    <p class="about-text">
+                        Busco mi primera oportunidad profesional en IT donde pueda aportar una base técnica 
+                        sólida y continuar aprendiendo en un entorno desafiante.
                     </p>
                 </div>
-            </div>
-            
-            <h3 class="text-center mt-5 mb-4">Habilidades Técnicas</h3>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="skills-container">
-                        <span class="badge badge-primary p-3 m-2"><i class="fab fa-html5"></i> HTML/CSS</span>
-                        <span class="badge badge-primary p-3 m-2"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="badge badge-primary p-3 m-2"><i class="fab fa-php"></i> PHP</span>
-                        <span class="badge badge-primary p-3 m-2"><i class="fas fa-database"></i> MySQL</span>
-                        <span class="badge badge-primary p-3 m-2"><i class="fab fa-python"></i> Python</span>
-                        <span class="badge badge-primary p-3 m-2"><i class="fab fa-java"></i> Java</span>
-                        <span class="badge badge-secondary p-3 m-2"><i class="fas fa-database"></i> Oracle SQL</span>
-                        <span class="badge badge-secondary p-3 m-2"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+
+                <div class="skills-section">
+                    <h3 class="skills-title">Tech Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">Oracle SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">HTML/CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">◆</span>
+                            <span class="skill-name">Git</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-5">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="text-center mb-4">Contacto</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <form id="contact-form" action="https://formspree.io/f/mpwzpjqv" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nombre:</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje:</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                        </button>
-                        <div id="success-message" class="alert alert-success mt-3" style="display: none;">
-                            <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te responderé pronto.
-                        </div>
-                        <div id="error-message" class="alert alert-danger mt-3" style="display: none;">
-                            <i class="fas fa-exclamation-circle"></i> <span id="error-text">Por favor, completa todos los campos correctamente.</span>
-                        </div>
-                    </form>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Conectemos</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                 
+                    <p class="contact-text">
+                        Estoy disponible para proyectos freelance y oportunidades laborales. 
+                        Si querés hablar sobre desarrollo web, no dudes en escribirme.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://github.com/sbongi22" target="_blank" class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sbongi" target="_blank" class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
                 </div>
+
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mpwzpjqv" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Enviar mensaje
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                    <div id="success-message" class="form-message success">
+                        ✓ Mensaje enviado. Te responderé pronto.
+                    </div>
+                    <div id="error-message" class="form-message error">
+                        ✕ <span id="error-text">Por favor completa todos los campos correctamente.</span>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="text-center py-4 bg-dark text-white">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p class="mb-2">© 2026 Santiago Bongiorno. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="https://github.com/sbongi22" target="_blank" class="text-white mx-2" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" class="text-white mx-2" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Santiago Bongiorno</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
