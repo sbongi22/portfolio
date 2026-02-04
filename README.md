@@ -8,4 +8,4 @@ LinkedIn: linkedin.com/in/sbongi
 
 GitHub: github.com/sbongi22
 
-Portfolio: sbongi22.github.io/Portfolio
+Portfolio: sbongi22.github.io/portfolio
