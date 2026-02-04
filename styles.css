@@ -59,7 +59,7 @@ body {
     right: 20px;
     z-index: 1000;
     background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--accent-cyan);
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -71,9 +71,17 @@ body {
 }
 
 .theme-toggle:hover {
-    background: var(--hover-bg);
-    border-color: var(--accent-cyan);
+    background: var(--accent-cyan);
     transform: rotate(180deg);
+}
+
+.theme-toggle:hover svg {
+    color: var(--bg-primary);
+}
+
+.theme-toggle svg {
+    color: var(--accent-cyan);
+    transition: color 0.3s ease;
 }
 
 .sun-icon {
@@ -112,7 +120,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.2rem 2rem; /* Un poco más compacto */
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -189,18 +197,19 @@ body {
 
 /* ===== Container ===== */
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Hero ===== */
 .hero {
-    min-height: 55vh; /* Altura ajustada */
+    min-height: 70vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 140px; /* Separación para que tu nombre no quede pegado arriba */
+    padding-top: 150px;
+    padding-bottom: 0px;
 }
 
 .hero-content {
@@ -208,7 +217,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 2.8rem); /* Un poco más pequeño */
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -245,16 +254,16 @@ body {
     transform: translateY(-3px);
 }
 
-/* ===== Section Styles ===== */
+/* ===== Secciones ===== */
 section {
-    padding: 5rem 0; /* Menos espacio libre entre secciones */
+    padding: 5rem 0;
 }
 
 .section-header {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3.5rem; /* Menos espacio bajo el título de sección */
+    margin-bottom: 5rem;
 }
 
 .section-number {
@@ -265,16 +274,16 @@ section {
 }
 
 .section-title {
-    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Títulos más balanceados */
+    font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: 700;
     letter-spacing: -1px;
 }
 
-/* ===== Work Section ===== */
+/* ===== Proyectos ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Más columnas si hay espacio */
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card {
@@ -285,6 +294,18 @@ section {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 968px) {
+    .project-card {
+        flex: 0 0 calc(50% - 1.25rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .project-card {
+        flex: 0 0 100%;
+    }
+}
+
 .project-card:hover {
     transform: translateY(-8px);
     border-color: var(--accent-cyan);
@@ -293,7 +314,7 @@ section {
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 250px; /* Altura de imagen reducida */
+    height: 200px;
 }
 
 .project-image img {
@@ -342,7 +363,7 @@ section {
 }
 
 .project-content {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .project-tags {
@@ -362,18 +383,19 @@ section {
 }
 
 .project-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--text-primary);
 }
 
 .project-description {
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
-/* ===== About Section ===== */
+/* ===== Sobre Mi ===== */
 .about {
     background: var(--bg-secondary);
 }
@@ -382,7 +404,6 @@ section {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 5rem;
-    align-items: start;
 }
 
 .about-text {
@@ -405,7 +426,7 @@ section {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .skill-item {
@@ -434,7 +455,7 @@ section {
     font-size: 0.95rem;
 }
 
-/* ===== Contact Section ===== */
+/* ===== Contacto ===== */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -442,7 +463,7 @@ section {
 }
 
 .contact-subtitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
@@ -478,7 +499,7 @@ section {
     transform: translateX(5px);
 }
 
-/* ===== Contact Form ===== */
+/* ===== Formulario ===== */
 .contact-form {
     background: var(--bg-secondary);
     padding: 2.5rem;
@@ -586,6 +607,16 @@ section {
     font-size: 0.9rem;
 }
 
+.heart {
+    color: var(--accent-magenta);
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 968px) {
     .nav-links {
@@ -610,10 +641,6 @@ section {
         display: flex;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .about-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -624,17 +651,57 @@ section {
         gap: 3rem;
     }
 
+    .hero-cta {
+        flex-direction: column;
+    }
+
     section {
-        padding: 4rem 0;
+        padding: 5rem 0;
     }
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .hero {
+        padding-top: 80px;
+        min-height: 60vh;
+    }
+
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 3rem;
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Smooth Animations ===== */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
     }
 }
