@@ -100,7 +100,7 @@ body {
     display: block;
 }
 
-/* ===== Navigation ===== */
+/* ===== Navegación ===== */
 .nav {
     position: fixed;
     top: 0;
@@ -207,8 +207,8 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 350px;
-    padding-bottom: 100px;
+    padding-top: 200px;
+    padding-bottom: 20px;
 }
 
 .hero-content {
@@ -255,7 +255,7 @@ body {
 
 /* ===== Secciones ===== */
 section {
-    padding: 5rem 0;
+    padding: 5rem 4rem;
 }
 
 .section-header {
@@ -273,7 +273,7 @@ section {
 }
 
 .section-title {
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
     letter-spacing: -1px;
 }
@@ -397,6 +397,10 @@ section {
 /* ===== Sobre Mi ===== */
 .about {
     background: var(--bg-secondary);
+}
+
+.about-content{
+    padding-top: 3rem;
 }
 
 .about-grid {
